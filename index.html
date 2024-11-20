@@ -6,10 +6,19 @@
     <title>Disco - Oscar Pereira</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header class="header">
       <nav>
         <img id="logo" src="./imgs/logo.jpg" alt="company_logo" />
+
+        <img
+          src="imgs/menu.png"
+          alt="menu-button"
+          id="menu-button"
+          onclick="openNav()"
+        />
+
         <ul>
           <li class="nav-li-item"><a class="nav-a-item" href="#">About</a></li>
           <li class="nav-li-item"><a class="nav-a-item" href="#">Shop</a></li>
@@ -20,19 +29,35 @@
           <li class="nav-li-item"><a class="nav-a-item" href="#">Blog</a></li>
         </ul>
 
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#">About</a>
+          <a href="#">Shop</a>
+          <a href="#">New</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+        </div>
+
         <img id="profile" src="./imgs/profile.png" alt="user_profile_picture" />
       </nav>
     </header>
 
     <main class="main">
-      <section class="main-section-hero"></section>
+      <section class="main-section-hero">
+        <img src="./imgs/main-textfilled.png" alt="deals-banner" />
+      </section>
+
       <aside class="main-aside-events">
-        Events
+        <h2>Events</h2>
         <hr />
         <p>24/10 🎸 Concierto Homenaje</p>
         <hr />
         <p>28/10 🖊️Firma de autografos</p>
+        <hr />
       </aside>
+
       <section class="main-section-albums">
         <ul>
           <li class="album-item">
@@ -54,24 +79,25 @@
         </ul>
       </section>
     </main>
+
     <section class="about">
-      <p>About Us</p>
-      <br />
+      <h2>About Us</h2>
       <hr />
       <p>
-        Disco is a store specializing in collectible records and vinyls of all
-        formats<br />
-        and focused mainly on the 60s to 90s. We have special sections of
-        records<br />
-        Spanish and British with the rarest records you can imagine as well as a
-        system of<br />
-        disk search on request. And also, music books, comics and movie
-        covers.<br />
+        <strong>Disco</strong> is a store specializing in
+        <em>collectible records</em> and <em>vinyls</em> of all formats<br />
+        and focused mainly on the <strong>60s to 90s</strong>. We have special
+        sections of records<br />
+        <strong>Spanish</strong> and <strong>British</strong> with the rarest
+        records you can imagine as well as a system of<br />
+        disk search on request. And also, <em>music books</em>,
+        <em>comics</em> and <em>movie covers</em>.<br />
         Our philosophy is to recover forgotten records and take care of them as
-        part of the audiovisual culture.<br />
+        part of the <strong>audiovisual culture</strong>.<br />
         We travel the planet to find that album you are looking for.<br />
       </p>
     </section>
+
     <footer class="footer">
       <p>
         © 2023 Disco Company.<br />
@@ -79,13 +105,17 @@
         1234 Victory Lane, Suite 100, Champions City, ST 12345<br />
         Phone: (555) 123-4567<br />
       </p>
+      <img id="footerLogo" src="./imgs/logo.jpg" alt="company_logo" />
       <img src="imgs/social.png" alt="social-media" />
     </footer>
-    <br>
-    <a  style="font-size: 48px;" href="prueba.php">Este enlace lleva a un documento PHP de prueba.</a>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "75%";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   </body>
-  <script>
-    let name = prompt("What is your name?"); 
-    alert("Hello " + name + "!");
-  </script>
 </html>
